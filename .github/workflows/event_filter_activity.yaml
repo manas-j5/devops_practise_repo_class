@@ -1,11 +1,13 @@
 name: Event Filters and Activity Types
 
 on:
-    pull_request:
-        types:
-            - opened
-        branches: 
-            - main
+    # pull_request:
+    #     types:
+    #         - opened
+    #     branches: 
+    #         - main
+    #         - test-pr
+    workflow_dispatch:
 jobs:
     echo:
         runs-on: ubuntu-latest
