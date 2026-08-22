@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 env:
+  MY_VAR: 'workflow'
   MY_WORKFLOW_VAR: 'workflow'
   MY_OVERWRITTEN_VAR: 'workflow'
 
@@ -31,7 +32,7 @@ jobs:
 
       - name: Retrieve variable value
         run: |
-          echo "Variable value: ${{ vars.MY_VAR }}"
+          echo "Variable value: $MY_VAR"
 
       - name: Display environment variables
         env:
