@@ -30,8 +30,10 @@ jobs:
           echo "Job Name: ${{ github.job }}"
 
       - name: Retrieve variable value
+        env:
+          MY_VAR: ${{ vars.MY_VAR }}
         run: |
-          echo "Variable value: ${{ vars.MY_VAR }}"
+          echo "Variable value: $MY_VAR"
 
       - name: Display environment variables
         env:
